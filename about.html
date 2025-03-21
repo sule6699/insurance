@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Injury Lawyers - Helping You Get the Compensation You Deserve">
+    <meta name="author" content="Your Law Firm Name">
+    <title>Your Personal Injury Lawyer</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">The Best Insurances</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>   
+            <li><a href="about.html">About Us</a></li>
+
+                     <li><a href="insurance.html">Insurance</a></li>
+
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+
+
+<div class="mobile-menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+
+        <li><a href="insurance.html">Insurances</a></li>
+       
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+<!-- About Us Section with Background Slideshow -->
+<section id="about">
+    <div class="overlay">
+        <div class="about-content">
+            <h2>About Us</h2>
+        <strong>  <p>Welcome to The Best Insurances We help you compare and find the best insurance for your needs, including health insurance, auto insurance, home insurance, life insurance, and even pet insurance.</p><br>
+            <p>Our goal is to make the insurance selection process easy by providing expert guidance, in-depth comparisons, and the latest insights, ensuring you get the perfect coverage at the best price.</p>
+       
+       </strong> </div>
+    </div>
+</section>
+
+
+<!-- Services Section (4 White Squares on a Blue Background) -->
+<section id="services">
+    <div class="container">
+        <div class="service-grid">
+            <div class="service-box">
+                <h4>USA Insurance</h4>
+             <p>We specialize in comparing insurance plans available in the USA, helping you find the best coverage within the country.</p>
+            </div>
+            <div class="service-box">
+                <h3>Finding the Right Insurance</h3>
+                <p>Not sure which insurance suits your personal situation? We guide you in choosing the best plan for your needs.</p>
+            </div>
+            <div class="service-box">
+                <h3>Compare Insurance Companies</h3>
+                <p>Explore different providers and see which insurance company fits your budget, coverage needs, and preferences.</p>
+            </div>
+            <div class="service-box">
+                <h3>Save Money & Get the Best Deal</h3>
+                <p>We provide insights and tips to help you find the most cost-effective insurance solutions without sacrificing quality.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Styles for Section and Boxes -->
+<style>
+    /* Section Background */
+    #services {
+        padding: 50px 0;
+        text-align: center;
+        background: #007BFF; /* Blue Background */
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* Grid Layout */
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* White Boxes */
+    .service-box {
+        background: white;
+        padding: 30px;
+        color: #333;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Hover Effect */
+    .service-box:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<!-- Styles for Section and Boxes -->
+<style>
+    /* Section Background */
+    #services {
+        padding: 50px 0;
+        text-align: center;
+        background: #295674; /* Blue Background */
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* Grid Layout */
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* White Boxes */
+    .service-box {
+        background: white;
+        padding: 30px;
+        color: #333;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Hover Effect */
+    .service-box:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p>Contact us for a free consultation, and let us fight for you!</p><br>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Tell us about your case..." required></textarea>
+            <button type="submit" class="cta-btn">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Your Personal Injury Lawyer. All Rights Reserved.</p>
+        <p>Privacy Policy | Terms & Conditions</p>
+    </div>
+</footer>
+
+<style>
+    /* Background Slideshow */
+    #about {
+        position: relative;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Dark overlay for readability */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+
+
+    
+    /* Content inside the overlay */
+    .about-content {
+        text-align: center;
+        color: white;
+        max-width: 80%;
+        font-size: 1.2rem;
+    }
+
+    /* Mobile Menu (Right Sidebar) */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Initially hidden */
+        width: 250px;
+        height: 100vh;
+        background: #222;
+        box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 60px;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu li {
+        padding: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    .mobile-menu a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Active class for showing menu */
+    .mobile-menu.active {
+        right: 0;
+    }
+
+    /* Close Button */
+    .close-menu {
+        display: none; /* Remove close button completely */
+    }
+
+    /* Hide menu icon when mobile menu is open */
+    .menu-icon {
+        font-size: 31px;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgb(255, 255, 255);
+        z-index: 1100;
+    }
+
+    .menu-icon.hidden {
+        display: none;
+    }
+</style>
+
+<script>
+    let currentSlide = 0;
+    const aboutSection = document.getElementById("about");
+
+    // Use the 3 images you sent
+    const images = [
+        "images/home.jpg",
+        "images/sweet.jpg",
+        "images/health.jpg"
+    ];
+
+    function changeBackground() {
+        aboutSection.style.backgroundImage = `url('${images[currentSlide]}')`;
+        currentSlide = (currentSlide + 1) % images.length;
+    }
+
+    setInterval(changeBackground, 5000); // Change image every 5 seconds
+    changeBackground(); // Set the first image on load
+
+    // Mobile menu toggle function
+    function toggleMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuIcon = document.querySelector('.menu-icon');
+
+        if (mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            menuIcon.classList.remove('hidden'); // Show menu icon when closing
+        } else {
+            mobileMenu.classList.add('active');
+            menuIcon.classList.add('hidden'); // Hide menu icon when opening
+        }
+    }
+</script>
+
+</body>
+</html>

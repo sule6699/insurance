@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Injury Lawyers - Helping You Get the Compensation You Deserve">
+    <meta name="author" content="Your Law Firm Name">
+    <title>Your Personal Injury Lawyer </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="logo">Icon Web</div>
+  
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Legal Advice</a></li>
+               <li><a href="#">Contact</a></li> 
+        </ul>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="mobile-menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Legal Advice</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+
+<center>
+<section id="about" class="section about">
+    <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>At [Personal Injury Lawyer], we pride ourselves on providing top-tier legal representation to those affected by personal injuries. With over 20 years of experience in the legal industry, we have successfully handled thousands of cases and have a proven track record of winning significant settlements for our clients.</p>
+                <p>Our team of expert attorneys is dedicated to ensuring justice for those who have been wrongfully injured, and we are passionate about providing personalized care and attention to each case.</p>
+            
+                <br>
+                <br>
+                <!-- Image Slideshow (Automatic Change) -->
+                <div class="image-slideshow">
+                    <img src="images/ro.jpg" class="image-slide" id="slider-image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</center>
+
+<!-- Contact Section -->
+<a href="#section-5">
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Contact us for a free consultation, and let us fight for you!</p><br>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Tell us about your case..." required></textarea>
+                <button type="submit" class="cta-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+</a>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Your Personal Injury Lawyer. All Rights Reserved.</p>
+        <p>Privacy Policy | Terms & Conditions</p>
+    </div>
+</footer>
+
+<script>
+    let currentSlide = 0; // Index for the current image
+    const images = [
+        'images/ro.jpg',  // Your image URLs
+        'images/schools.jpg',
+        'images/ro.jpg'   // Add more images as needed
+    ];
+
+    // Function to change the image
+    function changeSlide() {
+        currentSlide++;
+
+        if (currentSlide >= images.length) {
+            currentSlide = 0;  // Go back to the first image
+        }
+
+        document.getElementById('slider-image').src = images[currentSlide];
+    }
+
+    // Automatically change the slide every 2 seconds
+    setInterval(changeSlide, 5000);  // 5000 milliseconds = 2 seconds
+</script>
+
+<script src="your-script-file.js"></script>
+
+</body>
+</html>

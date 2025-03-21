@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Injury Lawyers - Helping You Get the Compensation You Deserve">
+    <meta name="author" content="Your Law Firm Name">
+    <title>Your Personal Injury Lawyer </title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <form action="https://formspree.io/f/mblgdvww" method="POST">
+
+
+     
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="logo">the best insurances</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="insurance.html">Insurances</a></li>
+          
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="mobile-menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+
+        <li><a href="insurance.html">Insurances</a></li>
+       
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Your Trusted insurances finder website </h2>
+            <p>Helping You Get The Compensation You Deserve</p>
+            <a href="#contact" class="cta-btn">Get Your Free Consultation</a>
+        </div>
+    </section>
+
+
+<!-- General Advice Section -->
+<section id="advice" class="section advice">
+    <div class="container">
+        <h2 class="section-title">General Advice: What to Do in Common Cases</h2>
+        <div class="advice-grid"> 
+
+            <div class="advice-item" onclick="toggleAdvice('car-accident', this)">
+                <h3>Car Accident <span class="toggle-sign">+</span></h3>
+                <div id="car-accident" class="advice-text">
+                    <p>If you're involved in a car accident, ensure your safety first, contact emergency services, and collect evidence.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('workplace-injury', this)">
+                <h3>Workplace Injury <span class="toggle-sign">+</span></h3>
+                <div id="workplace-injury" class="advice-text">
+                    <p>Report the incident, seek medical attention, and document everything for legal and insurance purposes.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('medical-malpractice', this)">
+                <h3>Medical Malpractice <span class="toggle-sign">+</span></h3>
+                <div id="medical-malpractice" class="advice-text">
+                    <p>If you suspect malpractice, get a second opinion and keep records of all treatments and communications.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('home-burglary', this)">
+                <h3>Home Burglary <span class="toggle-sign">+</span></h3>
+                <div id="home-burglary" class="advice-text">
+                    <p>Call the police, document damages, and notify your insurance company to start the claims process.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('identity-theft', this)">
+                <h3>Identity Theft <span class="toggle-sign">+</span></h3>
+                <div id="identity-theft" class="advice-text">
+                    <p>Freeze your credit, notify your bank, and report the theft to authorities as soon as possible.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('natural-disaster', this)">
+                <h3>Natural Disaster <span class="toggle-sign">+</span></h3>
+                <div id="natural-disaster" class="advice-text">
+                    <p>Follow evacuation orders, secure important documents, and stock up on emergency supplies.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('cyber-attack', this)">
+                <h3>Cyber Attack <span class="toggle-sign">+</span></h3>
+                <div id="cyber-attack" class="advice-text">
+                    <p>Change your passwords, enable two-factor authentication, and monitor accounts for unusual activity.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('lost-passport', this)">
+                <h3>Lost Passport <span class="toggle-sign">+</span></h3>
+                <div id="lost-passport" class="advice-text">
+                    <p>Report it immediately to the embassy and apply for a replacement as soon as possible.</p>
+                </div>
+            </div>
+
+            <div class="advice-item" onclick="toggleAdvice('fraud-scam', this)">
+                <h3>Fraud/Scam <span class="toggle-sign">+</span></h3>
+                <div id="fraud-scam" class="advice-text">
+                    <p>Stop communication with the scammer, report the fraud to authorities, and alert your bank or credit card provider.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+function toggleAdvice(id, element) {
+    var content = document.getElementById(id);
+    var sign = element.querySelector(".toggle-sign");
+    var isVisible = content.style.display === "block";
+
+    // Hide all sections
+    document.querySelectorAll('.advice-text').forEach(function(item) {
+        item.style.display = "none";
+    });
+
+    // Reset all signs to "+"
+    document.querySelectorAll('.toggle-sign').forEach(function(sign) {
+        sign.textContent = "+";
+    });
+
+    // Toggle only if it wasn't already open
+    if (!isVisible) {
+        content.style.display = "block";
+        sign.textContent = "−";
+    }
+}
+</script>
+
+<style>
+    .advice-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 15px;
+    }
+
+    .advice-item {
+        background-color: #295674;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .advice-item h3 {
+        cursor: pointer;
+        color: white;
+        background-color: #2d2b2b;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .toggle-sign {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .advice-text {
+        display: none;
+        margin-top: 10px;
+        color: #ddd;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .advice-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        }
+    }
+
+    @media (max-width: 500px) {
+        .advice-grid {
+            grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+        }
+    }
+</style>
+
+
+
+
+<table class="insurance-table">
+    <thead>
+        <tr>
+            <th>Insurance Company</th>
+            <th>Avg. Monthly Cost</th>
+            <th>Best For</th>
+            <th>Get a Quote</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Geico</td>
+            <td>$39</td>
+            <td>Low-Mileage Drivers</td>
+            <td><a href="https://www.geico.com" target="_blank">Get a Quote</a></td>
+        </tr>
+        <tr>
+            <td>Progressive</td>
+            <td>$45</td>
+            <td>High-Risk Drivers</td>
+            <td><a href="https://www.progressive.com" target="_blank">Get a Quote</a></td>
+        </tr>
+        <tr>
+            <td>State Farm</td>
+            <td>$42</td>
+            <td>Best for Young Drivers</td>
+            <td><a href="https://www.statefarm.com" target="_blank">Get a Quote</a></td>
+        </tr>
+        <tr>
+            <td>USAA</td>
+            <td>$35</td>
+            <td>Military Families</td>
+            <td><a href="https://www.usaa.com" target="_blank">Get a Quote</a></td>
+        </tr>
+        <tr>
+            <td>Allstate</td>
+            <td>$48</td>
+            <td>Best Discount Options</td>
+            <td><a href="https://www.allstate.com" target="_blank">Get a Quote</a></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+    <!-- Payment Structure Section -->
+    <section id="payment-structure">
+        <div class="container">
+            <h2>How Personal Injury Lawyers Get Paid & Client Compensation Breakdown</h2>
+            <p>Personal injury lawyers typically work on a <strong>contingency fee basis</strong>, meaning they only get paid if they win the case. Their fee is a percentage of the final settlement or court award, usually ranging between <strong>25% and 40%</strong>.</p>
+            
+            <h3>Breakdown of Payment Structure</h3>
+            <ul>
+                <li><strong>Lawyer's Fee:</strong> Typically, <strong>33.3% (or 1/3)</strong> of the total compensation is taken by the lawyer. However, this can vary:</li>
+                <ul>
+                    <li><strong>25%</strong> if settled early (before filing a lawsuit).</li>
+                    <li><strong>33.3%</strong> if settled after filing but before trial.</li>
+                    <li><strong>40%</strong> if the case goes to trial.</li>
+                </ul>
+                <li><strong>Client's Share:</strong> The client receives the remaining amount (<strong>60% to 75%</strong>) after the lawyer’s fee is deducted.</li>
+                <li>The client <strong>may also need to cover case expenses</strong> (court fees, expert witnesses, etc.), which are sometimes deducted separately.</li>
+            </ul>
+        </div>
+    </section>
+
+    <p><strong>Disclaimer:</strong></p>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 style="color: white;">What Our Clients Say</h2>
+<br>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <p>"I am beyond grateful to [Personal Injury Lawyer] for helping me get the compensation I deserved after my car accident. The team was professional, caring, and always kept me informed throughout the process. Highly recommended!"</p>
+                    <h3>- Client Name</h3>
+                    <div class="rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <p>"After a workplace injury that left me unable to work, I turned to [Personal Injury Lawyer]. They fought hard for my rights and secured a settlement that allowed me to recover and move on. Thank you!"</p>
+                    <h3>- Client Name</h3>
+                    <div class="rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <form action="https://formspree.io/f/mblgdvww" method="POST">
+
+
+    
+        <a href="#section-5">
+            <!-- Contact Section -->
+            <section id="contact" class="section contact">
+                <div class="container">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p>Contact us for a free consultation, and let us fight for you!</p><br>
+                    <form action="submit_form.php" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Tell us about your case..." required></textarea>
+                        <button type="submit" class="cta-btn">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </a>
+    
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Personal Injury Lawyer. All Rights Reserved.</p>
+            <p>Privacy Policy | Terms & Conditions</p>
+        </div>
+    </footer>
+
+  
+</body>
+</html>
