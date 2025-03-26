@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
+    
+    
+}
+
+.logo {
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align items vertically */
+    max-height: 150px; /* Limit the height of the header */
+    overflow: hidden; /* Prevent image overflow */
+}
+
+.logo img {
+    max-width: 200px; /* Set a specific max-width for the image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits without stretching */
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px; /* Add space between text and image */
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004C6D;
+    color: white;
+    padding: 5px 20px; /* Reduced padding for a shorter header */
+    max-height: 120px; /* Limit the header height */
+    box-sizing: border-box; /* Ensure padding fits within max-height */
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* MENU ICON */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Hide by default */
+    margin-top: 0px;
+}
+/* MOBILE MENU (Slide-in from Right) */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start hidden off-screen */
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+}
+
+/* MENU ICON */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Hide on large screens */
+    z-index: 1000;
+    
+}
+
+/* ACTIVE CLASS (Slide menu in) */
+.mobile-menu.active {
+    right: 0;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+
+/* Hero Section */
+.hero {
+    background-image: url('https://via.placeholder.com/1920x800');  /* Placeholder Image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #004C6D;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #004C6D;
+}
+
+.cta-btn {
+    background-color: #004C6D;  /* Dark Blue */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+/* Services Section */
+.services {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-item {
+    width: 30%;
+    background-color: #f1f1f1;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* General Advice Section */
+.advice {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.advice .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advice-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.advice-item {
+    width: 30%;
+    background-color: #224969;  /* Tomato */
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advice-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* General Advice Section */
+.advice-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.advice-item p {
+    font-size: 1.1rem;
+    color: white;
+}
+
+
+/* About Us Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.about .container {
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the section */
+    background-color: #224969;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centers text inside */
+}
+
+/* Payment Structure Section */
+#payment-structure {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+#payment-structure .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #004C6D;
+    padding: 50px 20px;
+}
+
+.testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-list {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.testimonial-item {
+    width: 45%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #004C6D;  /* Dark Blue */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003B59;  /* Darker Blue */
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #004C6D;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Mobile Icon Menu */
+#mobile-menu {
+    display: none;
+    list-style: none;
+    background-color: #004C6D;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+#mobile-menu li {
+    padding: 10px;
+}
+
+#mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Menu Icon Styling */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.image-slide {
+
+    max-width: 100%;
+    width: 250px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+
+
+}
+
+/* Ensure the image takes the full width but keeps the aspect ratio */
+.image-slideshow {
+    position: relative;
+    width: 160%; /* Ensures the slideshow container takes full width */
+    overflow: hidden; /* Hides anything outside the container */
+}
+
+.image-slide {
+    width: 15%; /* Makes the image take up the full width of the container */
+   
+    object-fit: contain; /* Makes sure the image fits within the container without cropping */
+}
+
+
+
+.insurance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.insurance-table th, .insurance-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.insurance-table th {
+    background-color: #2d2b2b;
+    color: white;
+    text-align: center;
+}
+
+.insurance-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.insurance-table a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.insurance-table a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Show the menu icon and toggle the navbar on smaller screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #mobile-menu {
+        display: none;  /* Hide by default */
+    }
+
+    #mobile-menu.active {
+        display: block;  /* Show when active */
+    }
+
+    .navbar {
+        display: none;  /* Hide regular navbar for mobile */
+    }
+}
+
+@media (max-width: 375px) {
+    .cta-btn {
+        font-size: 19px;       /* Smaller font for smaller screens */
+        padding: 10px;         /* Adjust padding */
+        max-width: 280px;      /* Limit the width */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.8rem;  /* Slightly larger font size for better readability */
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;  /* Slightly larger font size */
+    }
+
+    .service-list, .advice-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item, .advice-item {
+        width: 80%;
+        margin-bottom: 20px;
+        font-size: 1.2rem;  /* Increased font size */
+    }
+
+    .testimonial-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-item {
+        width: 80%;
+        margin-bottom: 20px;
+        font-size: 1.2rem;  /* Increased font size */
+    }
+
+    .contact form {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+
+    @media (max-width: 375px) {
+        .hero button {
+            font-size: 30px;     /* Smaller font size for small screens */
+            padding: 8px 12px;   /* Reduce padding */
+        }
+    
+        .hero h1 {
+            font-size: 22px;     /* Adjust heading size */
+        }
+    
+        .logo img {
+            max-width: 110px;    /* Ensure the logo fits */
+            
+        }
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .advice-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advice-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+
+.about.section-about{
+    flex-direction: column;
+    align-items: center;
+}
+
+
+}
+
+    .service-item, .advice-item {
+        width: 100%;
+        padding: 20px;
+        font-size: 1.3rem;  /* Increased font size */
+    }
+
+    .testimonial-item {
+        width: 100%;
+        font-size: 1.2rem;  /* Adjusted for better readability */
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+
+
+
+
+/* Hide navbar by default on small screens */
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+/* Basic Styling for Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Styling */
+#mobile-menu {
+    display: none; /* Hidden by default */
+    list-style: none;
+    background-color: #004C6D;  /* Dark Blue */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+#mobile-menu li {
+    padding: 10px;
+}
+
+#mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* When screen is small, show the hamburger icon */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+
+/* When mobile menu is active, show it */
+#mobile-menu.active {
+    display: block;  /* Show menu when active */
+}
+
