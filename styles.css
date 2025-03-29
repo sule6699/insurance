@@ -289,6 +289,10 @@ header {
     padding: 50px 20px;
 }
 
+.testimonial-text {
+    font-size: 1.2rem;
+}
+
 .testimonials .container {
     max-width: 1200px;
     margin: 0 auto;
