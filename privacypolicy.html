@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make the page responsive -->
     <title>Privacy Policy</title>
+    <link rel="stylesheet" href="style.css">
     <style>
+        /* Iframe Styling */
         iframe {
             width: 100%;
-            height: 1000px;
+            height: 1200px; /* Adjust height based on content */
             border: none;
+        }
+
+        /* Responsiveness for small screens */
+        @media (max-width: 600px) {
+            iframe {
+                height: 1500px; /* Ensure it doesn't cut off content on smaller screens */
+            }
+        }
+
+        /* Privacy Policy Text Styling */
+        .privacy-policy {
+            font-size: 18px; /* Moderate text size for better readability */
+            line-height: 1.8; /* Adjust line spacing */
+            padding: 20px;
+            max-width: 1000px; /* Restrict width for large screens */
+            margin: auto;
+        }
+
+        /* Extra large text for smartphones */
+        @media (max-width: 600px) {
+            .privacy-policy {
+                font-size: 20px; /* Slightly larger text on mobile */
+                padding: 15px; /* Adjust padding on mobile */
+            }
         }
     </style>
 </head>
@@ -16,9 +42,8 @@
 <body>
 
     <h1>Privacy Policy</h1>
-    <iframe src="https://www.termsfeed.com/live/d2c40f49-7974-4349-bf0d-b758dff2b246" 
-            width="100%" height="1000px" frameborder="0">
+    <iframe src="https://www.termsfeed.com/live/d2c40f49-7974-4349-bf0d-b758dff2b246" frameborder="0">
     </iframe>
-</body>
 
+</body>
 </html>
