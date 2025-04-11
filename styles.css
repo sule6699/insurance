@@ -67,13 +67,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* MENU ICON */
-.menu-icon {
-    font-size: 2rem;
-    cursor: pointer;
-    display: none; /* Hide by default */
-    margin-top: 0px;
-}
 /* MOBILE MENU (Slide-in from Right) */
 .mobile-menu {
     position: fixed;
@@ -109,14 +102,6 @@ header {
     width: 100%;
 }
 
-/* MENU ICON */
-.menu-icon {
-    font-size: 2rem;
-    cursor: pointer;
-    display: none; /* Hide on large screens */
-    z-index: 1000;
-    
-}
 
 /* ACTIVE CLASS (Slide menu in) */
 .mobile-menu.active {
@@ -395,13 +380,6 @@ footer p {
     font-size: 1.2rem;
 }
 
-/* Menu Icon Styling */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
 
 .menu-icon .bar {
     width: 30px;
