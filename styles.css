@@ -9,6 +9,8 @@ body {
     background: #f8f8f8;
     
         overflow-x: hidden;  /* Prevent horizontal scrolling */
+
+        
     
     
 }
@@ -67,6 +69,19 @@ header {
     font-size: 1.1rem;
 }
 
+.menu-icon {
+    font-size: 31px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: rgb(255, 255, 255);
+    z-index: 1100;
+}
+
+
+
+
 /* MOBILE MENU (Slide-in from Right) */
 .mobile-menu {
     position: fixed;
@@ -110,17 +125,29 @@ header {
 
 
 
+
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
     }
 
+    
+
     .menu-icon {
         display: block;
     }
 }
 
+
+
+@media (max-width: 768px) {
+    .img{
+
+margin-right: 99px;
+}
+}   
 
 
 /* Hero Section */
@@ -239,6 +266,8 @@ header {
 }
 
 
+
+
 /* About Us Section */
 .about {
     background-color: #f9f9f9;
@@ -256,6 +285,8 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center; /* Centers text inside */
 }
+
+
 
 /* Payment Structure Section */
 #payment-structure {
@@ -350,7 +381,12 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+    
 }
+
+
+
+
 
 footer p {
     margin: 5px 0;
@@ -380,6 +416,13 @@ footer p {
     font-size: 1.2rem;
 }
 
+/* Menu Icon Styling */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
 
 .menu-icon .bar {
     width: 30px;
@@ -447,6 +490,10 @@ footer p {
 .insurance-table a:hover {
     text-decoration: underline;
 }
+
+
+
+
 
 
 
