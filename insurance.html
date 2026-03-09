@@ -389,36 +389,48 @@ margin-right: 99px;
 </script>
       
 
-
-      <!-- electric -->
-<section class="service-container">
-    <article class="service-box">
-        <h2 style="color: #14438a; font-family: Inter;">How to Check Hard Drive Health</h2><br>
-        <p>Your hard drive is the heart of your computer, storing everything from your operating system to personal files. Over time, hard drives can develop errors, bad sectors, or mechanical wear, which can cause slow performance or data loss. Checking your hard drive’s health regularly is crucial to prevent surprises.</p>
+<!-- hard drive health -->
+<section class="service-container" style="background-color: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <article class="service-box" style="font-family: Inter, sans-serif; color: #333333; line-height: 1.6;">
+        <h2 style="color: #4aa8f5; font-family: Inter, sans-serif; font-size: 28px; margin-bottom: 15px;">How to Check Hard Drive Health</h2>
         
-        <p>Luckily, Windows has built-in tools and there are also free third-party programs that give you a clear picture of your drive’s condition. By following a few simple steps, you can see if your hard drive is healthy or needs attention.</p>
+        <p>Your hard drive is the storage center of your computer. It holds everything from your operating system and applications to your photos and documents. Over time, hard drives can develop issues like bad sectors, file corruption, or mechanical wear, which can lead to slow performance or sudden data loss. Regularly checking your hard drive’s health is essential to avoid unexpected problems.</p>
+        
+        <p>Here’s a complete guide to checking your hard drive, step by step, so you can identify problems early and protect your data.</p>
 <br>
-        <h4>Easy Ways to Check Your Hard Drive:</h4><br>
-        <ul>
-            <li><strong>Windows Error Checking:</strong> Go to “This PC”, right-click your drive, select <strong>Properties → Tools → Check</strong>. Windows will scan and fix basic file system errors.</li>
-            <li><strong>Check S.M.A.R.T. Status:</strong> Most modern drives support S.M.A.R.T. Open Command Prompt and type <strong>wmic diskdrive get status</strong>. “OK” means your drive is currently healthy.</li>
-            <li><strong>Run CHKDSK:</strong> Open Command Prompt and type <strong>chkdsk /f</strong>. This checks for bad sectors and repairs file system issues.</li>
-            <li><strong>Monitor Drive Performance:</strong> Notice slow loading, long file transfers, or freezing programs—these may indicate a problem with your hard drive.</li>
+        <h4 style="color: #2a7de1; margin-bottom: 10px;">Step 1: Check the Drive’s Built-In Status (S.M.A.R.T.)</h4>
+        <p>Most modern hard drives support <strong>S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology)</strong>, which monitors the drive’s health. On Windows, open Command Prompt and type:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 6px;">wmic diskdrive get status</pre>
+        <p>If it shows “OK,” your drive is currently healthy. If it shows “Pred Fail” or another warning, it’s time to back up your files immediately.</p>
+<br>
+        <h4 style="color: #2a7de1; margin-bottom: 10px;">Step 2: Run Windows Error Checking</h4>
+        <p>Windows has a built-in tool to scan for file system errors:</p>
+        <ul style="margin-left: 20px;">
+            <li>Open <strong>This PC</strong> and right-click the drive you want to check.</li>
+            <li>Select <strong>Properties → Tools → Check</strong>.</li>
+            <li>Windows will scan the drive and attempt to fix minor file system issues automatically.</li>
         </ul>
-
-        <h4>Warning Signs Your Hard Drive May Be Failing:</h4>
-        <ul>
-            <br>
-            <li><strong>Slow Access:</strong> Files or programs take longer than normal to open.</li>
-            <li><strong>Strange Noises:</strong> Clicking, grinding, or buzzing sounds often indicate mechanical failure.</li>
-            <li><strong>Frequent Crashes:</strong> Blue screens or system freezes may be linked to disk errors.</li>
-            <li><strong>Corrupted Files:</strong> Files suddenly unreadable or missing can be an early warning.</li>
+<br>
+        <h4 style="color: #2a7de1; margin-bottom: 10px;">Step 3: Use CHKDSK for Deep Scans</h4>
+        <p>The CHKDSK command checks the drive for errors and bad sectors:</p>
+        <pre style="background-color: #f5f5f5; padding: 10px; border-radius: 6px;">chkdsk /f /r</pre>
+        <p>This scans for damaged sectors and repairs file system problems. It can take some time depending on drive size, but it’s one of the most thorough tools built into Windows.</p>
+<br>
+        <h4 style="color: #2a7de1; margin-bottom: 10px;">Step 4: Monitor Performance and Symptoms</h4>
+        <p>Even if tools show “OK,” your drive can still be degrading. Watch for:</p>
+        <ul style="margin-left: 20px;">
+            <li>Slow file or program loading</li>
+            <li>Strange clicking or grinding noises</li>
+            <li>Frequent system freezes or blue screens</li>
+            <li>Files that suddenly become corrupted or unreadable</li>
         </ul>
-
-        <p>Always <strong>back up your important data</strong> if you notice any warning signs. Regular health checks and backups ensure your system runs smoothly and protect you from unexpected data loss.</p>
+<br>
+        <h4 style="color: #2a7de1; margin-bottom: 10px;">Step 5: Backup Regularly</h4>
+        <p>No tool can guarantee a drive won’t fail. The safest approach is to maintain regular backups. Use cloud storage, external drives, or both to protect your most important files.</p>
+<br>
+        <p>By following these steps, you can monitor your hard drive’s health effectively, catch issues early, and avoid data loss. Regular checks and backups are key to keeping your computer running smoothly and your data safe.</p>
     </article>
 </section>
-
 
       
     
@@ -511,6 +523,7 @@ margin-right: 99px;
       </canter>
 </body>
 </html>
+
 
 
 
