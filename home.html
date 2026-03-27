@@ -59,6 +59,33 @@
 
 
 
+
+
+<script>
+    function toggleAdvice(id, element) {
+        const content = document.getElementById(id);
+        const isOpen = content.style.display === "block";
+
+        // Close all advice items
+        document.querySelectorAll('.advice-text').forEach(item => item.style.display = "none");
+        document.querySelectorAll('.toggle-sign').forEach(sign => sign.textContent = "+");
+
+        // Toggle current item
+        if (!isOpen) {
+            content.style.display = "block";
+            element.querySelector('.toggle-sign').textContent = "−";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+    
+
     <section style="max-width: 1200px; margin: 0 auto; padding: 40px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
     
         <h1 style="font-size: 36px; color: #2c3e50; text-align: center; margin-bottom: 40px;">🛡️ Finding the Right Insurance</h1>
