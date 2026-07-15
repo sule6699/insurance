@@ -99,7 +99,362 @@
 
     
 
+   
+<style>
+    /* حاوية الأزرار العلوية (الموقع الإلكتروني والاتصال) */
+    .top-buttons-container {
+        display: flex;
+        gap: 12px;
+        max-width: 480px;
+        width: 100%;
+        margin: 10px auto 15px auto;
+        box-sizing: border-box;
+    }
 
+    .btn-apply-top {
+        flex: 1;
+        background-color: #4a90e2; /* لون أزرق مميز للموقع الإلكتروني */
+        color: white;
+        border: none;
+        padding: 12px 10px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(74, 144, 226, 0.25);
+        transition: background-color 0.2s;
+    }
+
+    .btn-apply-top:hover {
+        background-color: #357abd;
+    }
+
+    .btn-call-top {
+        flex: 1;
+        background-color: #ffffff;
+        color: #4a90e2;
+        border: 1px solid #4a90e2;
+        padding: 12px 10px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.2s;
+    }
+
+    .btn-call-top:hover {
+        background-color: #f0f7ff;
+    }
+
+    /* حاوية الكرت الأساسية (مطابقة تماماً للصور والفيديو) */
+    .card-container {
+        background-color: #ffffff;
+        border-radius: 24px; /* حواف دائرية ناعمة فخمة */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* ظل ناعم وخفيف يعطي بروز */
+        max-width: 480px;
+        width: 100%;
+        padding: 35px 25px;
+        box-sizing: border-box;
+        border: 1px solid #f0f0f2;
+        margin: 10px auto 20px auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        position: relative;
+    }
+
+    /* بادجات التنبيه والنشاط */
+    .job-badge-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .job-date-badge {
+        background-color: #e6f7ed; /* خلفية خضراء ناعمة للنشاط */
+        color: #1e7e34;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .urgently-hiring-badge {
+        background-color: #fff3cd; /* خلفية صفراء دافئة للتوظيف العاجل */
+        color: #856404;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 50px;
+    }
+
+    /* نقطة خضراء صغيرة */
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #28a745;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    /* اسم الشركة */
+    .company-name {
+        color: #6c757d;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    /* عنوان الوظيفة الرئيسي */
+    .card-title {
+        color: #1a1a1a;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 1.3;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    /* معلومات الراتب والدوام والموقع (منظمة بشكل جدول مبسط) */
+    .job-meta-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 25px;
+        border-top: 1px solid #f0f0f2;
+        border-bottom: 1px solid #f0f0f2;
+    }
+
+    .meta-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #f8f9fa;
+    }
+
+    .meta-row:last-child {
+        border-bottom: none;
+    }
+
+    .meta-label {
+        color: #6c757d;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .meta-value {
+        color: #1a1a1a;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: right;
+    }
+
+    /* العناوين الجانبية للأقسام */
+    .section-title {
+        color: #1a1a1a;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    /* النص التعريفي والوصف */
+    .card-description {
+        color: #4a4a4a;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    /* قائمة النقاط */
+    .bullet-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bullet-list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 15px;
+        color: #4a4a4a;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .bullet-list li::before {
+        content: "•";
+        color: #1a1a1a;
+        font-weight: bold;
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .bullet-list li strong {
+        color: #1a1a1a;
+        font-weight: 700;
+    }
+
+    /* الروابط داخل النص باللون الذهبي المطابق لموقعك */
+    .card-link {
+        color: #c48f27;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    .card-link:hover {
+        color: #a3731c;
+    }
+
+    /* زر التقديم الكبير والبارز في أسفل الكرت */
+    .btn-apply-bottom {
+        display: block;
+        background-color: #4a90e2;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-top: 35px;
+        box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .btn-apply-bottom:hover {
+        background-color: #357abd;
+        transform: translateY(-1px);
+    }
+
+    .btn-apply-bottom:active {
+        transform: translateY(1px);
+    }
+</style>
+
+<div class="top-buttons-container">
+    <a href="https://wd5.myworkdaysite.com/recruiting/sysco/syscocareers/job/Sysco-Central-Illinois/EHS-Leader_R257557/apply?utm_campaign=manufacturing&utm_medium=jobad&utm_content=pj_board&utm_source=snagajob&clickid=699d8435-1564-4b97-a46a-0b40c6a28623&p_sid=svIzFtb&p_uid=lYP70Cpqbv&source=rd_snagajob_pj&ss=paid" target="_blank" class="btn-apply-top">الموقع الإلكتروني</a>
+    <a href="tel:18005550199" class="btn-call-top">الاتصال بـ</a>
+</div>
+
+<div class="card-container">
+    
+    <div class="job-badge-container">
+        <span class="job-date-badge">
+            <span class="status-dot"></span>
+            <span id="dynamic-date">Posted: Today</span>
+        </span>
+        <span class="urgently-hiring-badge">Urgently Hiring</span>
+    </div>
+    
+    <div class="company-name">Sysco</div>
+    <h1 class="card-title">Environmental Health and Safety (EHS) Leader</h1>
+    
+    <div class="job-meta-table">
+        <div class="meta-row">
+            <span class="meta-label">Estimated Pay</span>
+            <span class="meta-value">$22.00 per hour</span>
+        </div>
+        <div class="meta-row">
+            <span class="meta-label">Hours</span>
+            <span class="meta-value">Full-time, Part-time</span>
+        </div>
+        <div class="meta-row">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">Lincoln, Illinois</span>
+        </div>
+    </div>
+    
+    <h2 class="section-title">About This Job</h2>
+    <p class="card-description">
+        The responsibility of this role is to provide intermediate-level site EHS expertise to assigned business units, support the field safety team, and partner with EHS function to implement the global EHS management system.
+    </p>
+
+    <h2 class="section-title">Duties & Responsibilities</h2>
+    <ul class="bullet-list">
+        <li>
+            <strong>Safety & Health:</strong> Support the field safety team, execute safety initiatives, and minimize injury risk across assigned business units.
+        </li>
+        <li>
+            <strong>Hazard Control:</strong> Identify, assess, and control site-level hazards, including supporting Supervisors in the investigation of incidents.
+        </li>
+        <li>
+            <strong>Compliance Training:</strong> Manage, deliver, and track compliance training programs as required by regulatory agencies and <a href="#" class="card-link">Sysco Policy</a>.
+        </li>
+        <li>
+            <strong>Workers' Comp:</strong> Support the workers' compensation claims process by completing OSHA determinations and identifying gaps.
+        </li>
+    </ul>
+
+    <h2 class="section-title">Education & Experience</h2>
+    <ul class="bullet-list">
+        <li>
+            <strong>Education Required:</strong> Bachelor's degree with major course work in EHS, risk management, safety/industrial/quality, environmental engineering, or a closely related field is required.
+        </li>
+        <li>
+            <strong>Education Preferred:</strong> Master's Degree in EHS or related field is preferred.
+        </li>
+        <li>
+            <strong>Experience Required:</strong> <strong>3+ years</strong> of EHS program management experience with large national or multi-national companies with multiple sites.
+        </li>
+        <li>
+            <strong>Licenses:</strong> Associate Safety Professional (ASP) designation or ability to acquire designation within 1 year is preferred.
+        </li>
+    </ul>
+
+    <a href="https://wd5.myworkdaysite.com/recruiting/sysco/syscocareers/job/Sysco-Central-Illinois/EHS-Leader_R257557/apply?utm_campaign=manufacturing&utm_medium=jobad&utm_content=pj_board&utm_source=snagajob&clickid=699d8435-1564-4b97-a46a-0b40c6a28623&p_sid=svIzFtb&p_uid=lYP70Cpqbv&source=rd_snagajob_pj&ss=paid" target="_blank" class="btn-apply-bottom">Apply Now ↗</a>
+
+</div>
+
+<script>
+    function getDynamicDate() {
+        const currentDay = new Date().getDate();
+        const daysAgo = currentDay % 4; // العداد يدور دائماً بين (0, 1, 2, 3) أيام
+        const dateElement = document.getElementById('dynamic-date');
+        
+        if (daysAgo === 0) {
+            dateElement.textContent = "Posted: Today";
+        } else if (daysAgo === 1) {
+            dateElement.textContent = "Posted: 1 day ago";
+        } else {
+            dateElement.textContent = `Posted: ${daysAgo} days ago`;
+        }
+    }
+    getDynamicDate();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+   
 
     
 
