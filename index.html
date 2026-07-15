@@ -100,6 +100,212 @@
 
 
 
+<style>
+    /* حاوية الكرت الأساسية (نفس التصميم المطلوب تماماً) */
+    .card-container {
+        background-color: #ffffff;
+        border-radius: 24px; /* حواف دائرية ناعمة */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* ظل ناعم يعطي عمق */
+        max-width: 450px; /* العرض الأقصى ليتناسب مع الجوالات */
+        width: 100%;
+        padding: 35px 25px;
+        box-sizing: border-box;
+        border: 1px solid #f0f0f2;
+        margin: 20px auto; /* لتوسيط الكرت في الصفحة */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        position: relative;
+    }
+
+    /* بادج تاريخ نشر الوظيفة والـ Urgency */
+    .job-badge-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .job-date-badge {
+        background-color: #e6f7ed; /* خلفية خضراء فاتحة تدل على النشاط */
+        color: #1e7e34; /* لون نص أخضر غامق */
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .urgently-hiring-badge {
+        background-color: #fff3cd; /* خلفية صفراء للتنبيه */
+        color: #856404; /* لون نص بني/ذهبي غامق */
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 50px;
+    }
+
+    /* نقطة خضراء تنبض لإثبات أن التقديم مفتوح حالياً */
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #28a745;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    /* اسم الشركة (Sysco) */
+    .company-name {
+        color: #6c757d;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    /* عنوان الوظيفة الرئيسي */
+    .card-title {
+        color: #1a1a1a; /* لون داكن رسمي وموثوق */
+        font-size: 24px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 1.3;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    /* النص التعريفي الرئيسي والمميزات السريعة */
+    .card-description {
+        color: #4a4a4a;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+
+    /* العناوين الجانبية للأقسام */
+    .section-title {
+        color: #1a1a1a;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    /* قائمة النقاط (Bullet Points) */
+    .bullet-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bullet-list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 15px;
+        color: #4a4a4a;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    /* تصميم النقطة المخصصة أمام كل سطر */
+    .bullet-list li::before {
+        content: "•";
+        color: #1a1a1a;
+        font-weight: bold;
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    /* تمييز الكلمات الهامة (Bold) داخل النقاط */
+    .bullet-list li strong {
+        color: #1a1a1a;
+        font-weight: 700;
+    }
+
+    /* الروابط المدمجة داخل النص */
+    .card-link {
+        color: #c48f27; /* اللون الذهبي المطلوب للنصوص القابلة للضغط */
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    .card-link:hover {
+        color: #a3731c;
+    }
+</style>
+
+<!-- الكرت يبدأ من هنا -->
+<div class="card-container">
+    
+    <!-- قسم التنبيهات والتاريخ الذكي -->
+    <div class="job-badge-container">
+        <span class="job-date-badge">
+            <span class="status-dot"></span>
+            <span id="dynamic-date">Posted: Today</span>
+        </span>
+        <span class="urgently-hiring-badge">Urgently Hiring</span>
+    </div>
+    
+    <!-- اسم الشركة وعنوان الوظيفة -->
+    <div class="company-name">Sysco</div>
+    <h1 class="card-title">Environmental Health and Safety (EHS) Leader</h1>
+    
+    <!-- معلومات الراتب والدوام السريعة -->
+    <p class="card-description">
+        Sysco is looking for an intermediate-level **EHS Leader** in **Lincoln, Illinois**. This position offers an estimated pay of <strong>$22 per hour</strong> with flexible Full-time and Part-time hours. 
+    </p>
+    
+    <!-- عنوان النقاط الرئيسية -->
+    <h2 class="section-title">Job Responsibilities:</h2>
+    
+    <!-- قائمة التفاصيل المستخلصة من العرض الرئيسي -->
+    <ul class="bullet-list">
+        <li>
+            <strong>Safety & Health:</strong> Support the field safety team, execute safety initiatives, and minimize injury risk across assigned business units.
+        </li>
+        <li>
+            <strong>Compliance:</strong> Maintain strict adherence to federal, state, and local health regulations via <a href="#" class="card-link">EHS Management System</a>.
+        </li>
+        <li>
+            <strong>Training Programs:</strong> Manage, deliver, and track compliance training programs as required by regulatory agencies and <a href="#" class="card-link">Sysco Policy</a>.
+        </li>
+    </ul>
+
+</div>
+
+<!-- كود الـ JavaScript السحري لتحديث الأيام تلقائياً (بين اليوم و 3 أيام مضت) -->
+<script>
+    function getDynamicDate() {
+        const currentDay = new Date().getDate();
+        const daysAgo = currentDay % 4; // العداد يدور دائماً بين (0, 1, 2, 3) أيام
+        const dateElement = document.getElementById('dynamic-date');
+        
+        if (daysAgo === 0) {
+            dateElement.textContent = "Posted: Today";
+        } else if (daysAgo === 1) {
+            dateElement.textContent = "Posted: 1 day ago";
+        } else {
+            dateElement.textContent = `Posted: ${daysAgo} days ago`;
+        }
+    }
+    // تشغيل الدالة تلقائياً بمجرد فتح الصفحة
+    getDynamicDate();
+</script>
+
+
+
+
+
+
+    
+
     
 
     <section style="max-width: 1100px; margin: 0 auto; padding: 45px; background-color: #ffffff; border-radius: 22px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);">
