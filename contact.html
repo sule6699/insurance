@@ -72,6 +72,179 @@
 
 
 
+<!-- قسم الـ CSS الخاص بتنسيق الوظيفة فقط -->
+<style>
+    .job-card-box {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        max-width: 650px;
+        width: 100%;
+        padding: 30px;
+        border-top: 5px solid #0046be;
+        box-sizing: border-box;
+        margin: 20px auto;
+        text-align: left;
+    }
+    .job-card-box * {
+        box-sizing: border-box;
+    }
+    .job-card-box .company-name {
+        font-size: 1.1rem;
+        color: #0046be;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 0 5px 0;
+    }
+    .job-card-box .job-title {
+        font-size: 1.8rem;
+        color: #111;
+        margin: 0 0 15px 0;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .job-card-box .badge-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .job-card-box .badge {
+        background-color: #e6f0fa;
+        color: #0046be;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    .job-card-box .badge.urgent {
+        background-color: #ffebeb;
+        color: #d93838;
+    }
+    .job-card-box .job-details-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    .job-card-box .detail-item {
+        font-size: 0.95rem;
+    }
+    .job-card-box .detail-label {
+        color: #666;
+        font-size: 0.85rem;
+        margin-bottom: 2px;
+    }
+    .job-card-box .detail-value {
+        font-weight: 600;
+        color: #222;
+    }
+    .job-card-box .section-title {
+        font-size: 1.2rem;
+        color: #222;
+        margin: 25px 0 10px 0;
+        border-bottom: 2px solid #f0f2f5;
+        padding-bottom: 5px;
+        font-weight: 600;
+    }
+    .job-card-box .job-description ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+    .job-card-box .job-description li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #444;
+    }
+    .job-card-box .apply-btn {
+        display: block;
+        width: 100%;
+        background-color: #0046be;
+        color: white;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        box-shadow: 0 4px 10px rgba(0, 70, 190, 0.2);
+    }
+    .job-card-box .apply-btn:hover {
+        background-color: #003594;
+    }
+    .job-card-box .apply-btn:active {
+        transform: scale(0.99);
+    }
+</style>
+
+<!-- محتوى بطاقة الوظيفة الداخلي -->
+<div class="job-card-box">
+    <div class="job-header">
+        <p class="company-name">ACE Hardware</p>
+        <h1 class="job-title">Part-time Cashier</h1>
+        <div class="badge-container">
+            <span class="badge urgent">Urgently Hiring</span>
+            <span class="badge">Part-time</span>
+        </div>
+    </div>
+
+    <div class="job-details-grid">
+        <div class="detail-item">
+            <div class="detail-label">Verified Pay</div>
+            <div class="detail-value">$11.00 per hour</div>
+        </div>
+        <div class="detail-item">
+            <div class="detail-label">Location</div>
+            <div class="detail-value">Celina, Ohio</div>
+        </div>
+    </div>
+
+    <div class="job-description">
+        <div class="section-title">Core Responsibilities</div>
+        <ul>
+            <li>Project a positive and professional representation of Ace Retail Group.</li>
+            <li>Greet customers entering the store and thank them upon departure.</li>
+            <li>Follow all cash register transaction and balancing procedures accurately.</li>
+            <li>Keep front-end area, including checkout lanes, neat and clean at all times.</li>
+            <li>Ensure fresh products and shopping supplies are fully stocked.</li>
+        </ul>
+
+        <div class="section-title">Requirements & Qualifications</div>
+        <ul>
+            <li>High School Diploma or GED equivalent.</li>
+            <li>Cashier and customer service experience is preferred.</li>
+            <li>Ability to stand, walk, and lift up to 25 lbs during shifts.</li>
+        </ul>
+    </div>
+
+    <!-- زر التقديم السريع -->
+    <button class="apply-btn" id="aceHardwareApplyBtn">Apply Now</button>
+</div>
+
+<!-- كود الجافا سكريبت الخاص بالزر بدون التأثير على بقية الصفحة -->
+<script>
+    (function() {
+        var btn = document.getElementById('aceHardwareApplyBtn');
+        if (btn) {
+            btn.addEventListener('click', function() {
+                var url = "https://acehardware.wd1.myworkdayjobs.com/en-US/ARG_External/job/Store-18515---Celina-OH/Part-time-Cashier--Celina--OH-_REQ-30534/apply/autofillWithResume?source=Snagajob&clickid=931b9575-6b0c-4ade-9a2b-9d61fe30ea5f";
+                window.open(url, '_blank');
+            });
+        }
+    })();
+</script>
+
+
+
+
 
 
     
