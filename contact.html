@@ -74,6 +74,206 @@
         max-width: 650px;
         width: 100%;
         padding: 30px;
+        border-top: 5px solid #002855;
+        box-sizing: border-box;
+        margin: 20px auto;
+        text-align: left;
+    }
+    .job-card-box * {
+        box-sizing: border-box;
+    }
+    .job-card-box .company-name {
+        font-size: 1.1rem;
+        color: #002855;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 0 5px 0;
+    }
+    .job-card-box .job-title {
+        font-size: 1.8rem;
+        color: #111;
+        margin: 0 0 15px 0;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .job-card-box .badge-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .job-card-box .badge {
+        background-color: #e6f0fa;
+        color: #002855;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    .job-card-box .badge.urgent {
+        background-color: #ffebeb;
+        color: #d93838;
+    }
+    .job-card-box .job-details-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    .job-card-box .detail-item {
+        font-size: 0.95rem;
+    }
+    .job-card-box .detail-label {
+        color: #666;
+        font-size: 0.85rem;
+        margin-bottom: 2px;
+    }
+    .job-card-box .detail-value {
+        font-weight: 600;
+        color: #222;
+    }
+    .job-card-box .section-title {
+        font-size: 1.2rem;
+        color: #222;
+        margin: 25px 0 10px 0;
+        border-bottom: 2px solid #f0f2f5;
+        padding-bottom: 5px;
+        font-weight: 600;
+    }
+    .job-card-box .job-description ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+    .job-card-box .job-description li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #444;
+    }
+    .job-card-box .apply-btn {
+        display: block;
+        width: 100%;
+        background-color: #002855;
+        color: white;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        box-shadow: 0 4px 10px rgba(0, 40, 85, 0.2);
+    }
+    .job-card-box .apply-btn:hover {
+        background-color: #001a3a;
+    }
+    .job-card-box .apply-btn:active {
+        transform: scale(0.99);
+    }
+</style>
+
+<!-- محتوى بطاقة الوظيفة الداخلي -->
+<div class="job-card-box">
+    <div class="job-header">
+        <p class="company-name">Staff Management | SMX (Callaway Golf)</p>
+        <h1 class="job-title">Warehouse Picker/Packer</h1>
+        <div class="badge-container">
+            <span class="badge urgent">Urgently Hiring</span>
+            <span class="badge">Full-time / Part-time</span>
+        </div>
+    </div>
+
+    <div class="job-details-grid">
+        <div class="detail-item">
+            <div class="detail-label">Verified Pay</div>
+            <div class="detail-value">$15.50 - $16.00 per hour</div>
+        </div>
+        <div class="detail-item">
+            <div class="detail-label">Location</div>
+            <div class="detail-value">Roanoke, Texas</div>
+        </div>
+    </div>
+
+    <div class="job-description">
+        <div class="section-title">About This Job</div>
+        <ul>
+            <li>Great opportunity for long-term employment with a premier client and global leader in sporting goods.</li>
+            <li>Get a weekly paycheck, learn new skills, and work with a great management team in a clean and safe environment.</li>
+            <li>Employment Types: Full-Time, Temp to Hire.</li>
+        </ul>
+
+        <div class="section-title">Shift Information</div>
+        <ul>
+            <li><strong>1st Shift:</strong> Monday - Friday, 6:00AM - 6:00PM.</li>
+            <li>Saturdays & Sundays required if scheduled during peak season.</li>
+            <li>Hours subject to change due to mandatory overtime (8-12 hours shifts).</li>
+        </ul>
+
+        <div class="section-title">Duties & Responsibilities</div>
+        <ul>
+            <li>Order picking with an RF Scanner, print and place labels to scan.</li>
+            <li>Picking, packing, assembly, shipping, receiving, and unloading.</li>
+            <li>Perform general labor and support to multiple warehouse departments.</li>
+            <li>Required to lift up to 60 lbs repetitively, sort, and stack boxes.</li>
+        </ul>
+
+        <div class="section-title">Perks & Benefits</div>
+        <ul>
+            <li>Weekly paychecks with Direct Deposit or Cash Card options.</li>
+            <li>Casual Dress Code and modern, high-tech environment.</li>
+            <li>Medical, Dental, Vision, Life Insurance, and Paid Time Off.</li>
+            <li>Paid Training and Advancement Opportunities.</li>
+        </ul>
+
+        <div class="section-title">Requirements</div>
+        <ul>
+            <li>Must be at least 18 years old.</li>
+            <li>Ability to lift up to 60 lbs and stand/walk for a 12-hour shift duration.</li>
+            <li>Pass a Background Check and Drug Test.</li>
+            <li>Education: High School Diploma or GED.</li>
+        </ul>
+    </div>
+
+    <!-- زر التقديم السريع -->
+    <button class="apply-btn" id="smxWarehouseApplyBtn">Apply Now</button>
+</div>
+
+<!-- كود الجافا سكريبت الخاص بالزر -->
+<script>
+    (function() {
+        var btn = document.getElementById('smxWarehouseApplyBtn');
+        if (btn) {
+            btn.addEventListener('click', function() {
+                var url = "https://portal.smjobs.com/pro/views_v4/loginRegister.jsf?jobId=7688A&mediaCode=JBG&countryId=1&rtv=appController";
+                window.open(url, '_blank');
+            });
+        }
+    })();
+</script>
+
+
+
+
+
+    
+
+
+
+<!-- قسم الـ CSS الخاص بتنسيق الوظيفة فقط -->
+<style>
+    .job-card-box {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        max-width: 650px;
+        width: 100%;
+        padding: 30px;
         border-top: 5px solid #ffc107;
         box-sizing: border-box;
         margin: 20px auto;
