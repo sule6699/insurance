@@ -64,6 +64,181 @@
 
 
 
+<!-- قسم الـ CSS الخاص بتنسيق الوظيفة فقط -->
+<style>
+    .job-card-box {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        max-width: 650px;
+        width: 100%;
+        padding: 30px;
+        border-top: 5px solid #ffc107;
+        box-sizing: border-box;
+        margin: 20px auto;
+        text-align: left;
+    }
+    .job-card-box * {
+        box-sizing: border-box;
+    }
+    .job-card-box .company-name {
+        font-size: 1.1rem;
+        color: #d32f2f;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 0 5px 0;
+    }
+    .job-card-box .job-title {
+        font-size: 1.8rem;
+        color: #111;
+        margin: 0 0 15px 0;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .job-card-box .badge-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .job-card-box .badge {
+        background-color: #e6f0fa;
+        color: #0046be;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    .job-card-box .badge.urgent {
+        background-color: #ffebeb;
+        color: #d93838;
+    }
+    .job-card-box .job-details-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    .job-card-box .detail-item {
+        font-size: 0.95rem;
+    }
+    .job-card-box .detail-label {
+        color: #666;
+        font-size: 0.85rem;
+        margin-bottom: 2px;
+    }
+    .job-card-box .detail-value {
+        font-weight: 600;
+        color: #222;
+    }
+    .job-card-box .section-title {
+        font-size: 1.2rem;
+        color: #222;
+        margin: 25px 0 10px 0;
+        border-bottom: 2px solid #f0f2f5;
+        padding-bottom: 5px;
+        font-weight: 600;
+    }
+    .job-card-box .job-description ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+    .job-card-box .job-description li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #444;
+    }
+    .job-card-box .apply-btn {
+        display: block;
+        width: 100%;
+        background-color: #d32f2f;
+        color: white;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
+    }
+    .job-card-box .apply-btn:hover {
+        background-color: #b71c1c;
+    }
+    .job-card-box .apply-btn:active {
+        transform: scale(0.99);
+    }
+</style>
+
+<!-- محتوى بطاقة الوظيفة الداخلي -->
+<div class="job-card-box">
+    <div class="job-header">
+        <p class="company-name">Buffalo Wild Wings</p>
+        <h1 class="job-title">Cashier</h1>
+        <div class="badge-container">
+            <span class="badge urgent">Urgently Hiring</span>
+            <span class="badge">Part-time</span>
+        </div>
+    </div>
+
+    <div class="job-details-grid">
+        <div class="detail-item">
+            <div class="detail-label">Estimated Pay</div>
+            <div class="detail-value">$12.00 per hour</div>
+        </div>
+        <div class="detail-item">
+            <div class="detail-label">Location</div>
+            <div class="detail-value">Newport, Kentucky</div>
+        </div>
+    </div>
+
+    <div class="job-description">
+        <div class="section-title">About This Job</div>
+        <ul>
+            <li>Welcome guests as they enter the restaurant, providing a warm and energetic environment.</li>
+            <li>Manage takeout orders and ensure smooth guest service and order accuracy.</li>
+            <li>Maintain an organized and welcoming front-of-house area.</li>
+        </ul>
+
+        <div class="section-title">Perks & Benefits</div>
+        <ul>
+            <li>Weekly Pay & Flexible Schedule.</li>
+            <li>Shift Meal Discount and Family Dining Discount.</li>
+            <li>Best-in-Class Training & Advancement Opportunities.</li>
+            <li>Medical, Dental, Vision & 401(k) Retirement Program.</li>
+        </ul>
+
+        <div class="section-title">Requirements</div>
+        <ul>
+            <li>Must be 16 years of age or older (or higher per applicable law).</li>
+            <li>Strong time management, attention to detail, and guest service skills.</li>
+            <li>Positive, sports-lover attitude! All backgrounds are welcome.</li>
+        </ul>
+    </div>
+
+    <!-- زر التقديم السريع -->
+    <button class="apply-btn" id="bwwApplyBtn">Apply Now</button>
+</div>
+
+<!-- كود الجافا سكريبت الخاص بالزر -->
+<script>
+    (function() {
+        var btn = document.getElementById('bwwApplyBtn');
+        if (btn) {
+            btn.addEventListener('click', function() {
+                var url = "https://olivia.paradox.ai/co/InspireBrands2/Job?job_id=P1-1508121-14&rx_cid=3328&source=Snag_A_Job&utm_medium=sponsored&utm_source=Snagajob";
+                window.open(url, '_blank');
+            });
+        }
+    })();
+</script>
 
 
 
