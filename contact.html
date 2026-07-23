@@ -63,6 +63,188 @@
 
 
 
+<style>
+  .job-card-box {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    max-width: 650px;
+    width: 100%;
+    padding: 30px;
+    border-top: 5px solid #d32f2f;
+    box-sizing: border-box;
+    margin: 20px auto;
+    text-align: left;
+  }
+
+  .job-card-box * {
+    box-sizing: border-box;
+  }
+
+  .card-box .company-name {
+    font-size: 1.1rem;
+    color: #d32f2f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+  }
+
+  .card-box .job-title {
+    font-size: 1.8rem;
+    color: #111;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .card-box .badge-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card-box .badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .card-box .badge-urgent {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+
+  .card-box .badge-type {
+    background-color: #e3f2fd;
+    color: #1565c0;
+  }
+
+  .card-box .job-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .card-box .detail-label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2px;
+  }
+
+  .card-box .detail-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .card-box .section-title {
+    font-size: 1.2rem;
+    color: #222;
+    margin: 20px 0 10px 0;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 5px;
+    font-weight: 600;
+  }
+
+  .card-box .job-description ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .card-box .job-description li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  .card-box .apply-btn {
+    display: block;
+    width: 100%;
+    background-color: #d32f2f;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+  }
+
+  .card-box .apply-btn:hover {
+    background-color: #b71c1c;
+  }
+</style>
+
+<div class="job-card-box card-box">
+  <div class="company-name">Ken Ganley Chrysler Dodge Jeep Ram</div>
+  <h2 class="job-title">Service Appointment Coordinator (Customer Service)</h2>
+  
+  <div class="badge-container">
+    <span class="badge badge-urgent">Urgently Hiring</span>
+    <span class="badge badge-type">Full-Time</span>
+  </div>
+
+  <div class="job-details-grid">
+    <div class="detail-item">
+      <div class="detail-label">Verified Pay</div>
+      <div class="detail-value">$16.00 - $20.00 / hour</div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-label">Location</div>
+      <div class="detail-value">Bedford, OH</div>
+    </div>
+  </div>
+
+  <div class="job-description">
+    <div class="section-title">Job Benefits & Highlights</div>
+    <ul>
+      <li>Paid Training provided for the right candidate</li>
+      <li>Full Family Benefits (Medical, Dental, Vision, & Life Insurance)</li>
+      <li>Paid Time Off (PTO) & 401(k) Retirement Plan</li>
+      <li>Stable work environment with growth opportunities</li>
+    </ul>
+
+    <div class="section-title">Key Responsibilities</div>
+    <ul>
+      <li>Schedule service appointments for customers via phone and online inquiries.</li>
+      <li>Assist customers with service-related questions and confirm appointments.</li>
+      <li>Provide exceptional customer service and maintain accurate customer records.</li>
+    </ul>
+  </div>
+
+  <button class="apply-btn" id="applyBtnServiceCoord">Apply Now &amp; Submit Application</button>
+</div>
+
+<script>
+  (function() {
+    var btn = document.getElementById('applyBtnServiceCoord');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var targetUrl = "https://app.firstchoicehiring.com/online-application/initialize-oa/eyJpdiI6IjhYcSt5OFRabHoxdGkxbkpDQjlPL3c9PSIsInZhbHVlIjoiRGNVMEhmZDFmWHR2VlpvbThWMDBITGgwb3JjSDJxNHpqYXNkeFRxZHZNRFhBd0g1bHN4K3VidlRXaVJ2TU9TZ1JBY0xuNUxrN21PaEx0VnVSaWk4dFh1OXY5MDU1bmF1dlM2YTlyblpWTnM9IiwibWFjIjoiMzFjN2VmYTUzZmM1NGFlMTEzZmM2NjIwMThkYWJkMmY0YWZlNTkwODQ5OTViNDQzZDE2NDBlNTUxZGE1Y2VkMiIsInRhZyI6IiJ9?clickid=8cf91be7-9644-44b8-a437-2c2740dd91ee";
+        window.open(targetUrl, '_blank');
+      });
+    }
+  })();
+</script>
+
+
+
+
+    
+
 
 
 <!-- قسم الـ CSS الخاص بتنسيق الوظيفة فقط -->
